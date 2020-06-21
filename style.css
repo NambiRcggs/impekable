@@ -1,0 +1,326 @@
+@font-face {
+    font-family: "Source Sans Pro,Regular";
+    src: url("assets/fonts/SourceSansPro-Regular.ttf");
+}
+@font-face {
+    font-family: "Source Sans Pro,Bold";
+    src: url("assets/fonts/SourceSansPro-Bold.ttf");
+}
+
+
+
+
+body{
+    font-family: "Source Sans Pro,Regular" !important;
+}
+h6 {
+    font-size: 18px;
+    color: #4D4F5C;
+}
+#sideBar {
+    transition: 1s;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #43425D;
+    overflow-x: hidden;
+  }
+  .logo h6 {
+    padding-left: 15px;
+    font-family: "Source Sans Pro,Bold";
+    letter-spacing: 3px;
+    color: #fff;
+    margin: 0;
+    line-height: 20px;
+    padding: 25px 25px;
+    background: #3c3b54;
+}
+
+.sidenav>a {
+    display: block;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 15px;
+    line-height: 15px;
+}
+.sidenav>a:hover,.sidenav>a.active{
+    background-color: #3c3b54;
+    text-decoration: none;
+}
+header {
+    transition: 1s;
+    background: #43425d;
+    position: fixed;
+    width: 100%;
+    clear: both;
+    height: 70px;
+    z-index: 9;
+}
+nav.bg-white{
+    transition: 1s;
+    border-top-left-radius: 25px;
+    position: fixed;
+    right: 0;
+    width: calc(100% - 260px);
+}
+#content-pane .bg-white{
+    overflow: auto;
+}
+section#content-pane {
+    margin-top: 70px;
+}
+.stripe {
+    width: 23px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+span.stripe.stripe-collapse {
+    height: 20px;
+    margin-right: 35px;
+    background: url("assets/images/icons.png") 25px 0px;
+}
+span.home-stripe {
+    background: url("./assets/images/icons.png") 0px -3px;
+}
+
+span.dashboard-stripe{
+    background: url("./assets/images/icons.png") -35px -3px;
+}
+span.inbox-stripe {
+    background: url("./assets/images/icons.png") -71px -3px;
+}
+
+span.products-stripe {
+    background: url("./assets/images/icons.png") -106px -3px;
+}
+
+section#mainContent {
+    transition: 1s;
+    width: calc(100% - 260px);
+    float: right;
+    height: 100vh;
+    background: #F0F0F7;
+    overflow-y: auto;
+}
+img.rounded-circle {
+    width: 38px;
+}
+.dropdown-menu.dropdown-menu-lg-right.dropdown-secondary {
+    position: absolute;
+    right: 20px !important;
+    left: auto;
+}
+
+#mainContent form input[type=text] {
+    background: transparent !important;
+    border: transparent;
+    color:black;
+    width: 320px;
+}
+#mainContent form button.btn {
+    background: transparent;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+}
+
+#mainContent form button.btn>span.search-stripe {
+    background: url("./assets/images/icons.png") 255px 22px;
+    height: 20px;
+}
+#mainContent form input[type=text] {
+    outline: none !important;
+    border: none !important;
+    border-width: 0px;
+    outline:0; /* I have also tried outline:none */
+    -webkit-appearance:none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+p.user-name {
+    color: #212529;
+    margin: 0;
+    line-height: 35px;
+}
+
+i.stripe.bell-stripe {
+    background: url("./assets/images/icons.png") 225px 21px;
+    height: 22px;
+    width: 22px;
+    margin-top: 7px;
+}
+
+h4.first-heading {
+    padding: 26px 15px;
+    font-size: 28px;
+    font-weight: bold;
+    /* margin: 0; */
+}
+.chart-card {
+    max-height: 440px;
+}
+
+.card.user-card {
+    min-height: 600px;
+}
+canvas {
+    margin: 15px;
+    width:calc(100% - 30px) !important;
+    height:350px !important
+}
+
+table.table td{
+    font-size:13px;
+    color:#4D4F5C;
+    padding: 15px;
+}
+thead, th,thead>tr {
+    padding: 15px;
+    text-transform: uppercase;
+    background: #f0f0f7;
+    border: 0 !important;
+    color:#A3A6B4;
+    font-size:13px;
+}
+.text-intend{
+    padding-left:12px;
+}
+
+/* Youtube embedd code */
+.newst{position:relative;text-align:right;height:420px;width:520px;} #gmap_canvas img{max-width:none!important;background:none!important}
+
+
+.img-circle {
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-circle img{
+    border-radius: 50%;
+    width: 107px;
+    margin: auto;
+    height: 107px;
+}
+li.insta-stripe {
+    background: url("assets/images/icons.png") 225px -1px;
+}
+
+li.twitter-stripe {
+    background: url("assets/images/icons.png") 190px -1px;
+}
+
+li.facebook-stripe {
+    background: url("assets/images/icons.png") 150px -1px;
+}
+
+li.message-stripe {
+    background: url("assets/images/icons.png") 114px -1px;
+}
+li.stripe>a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+}
+ul.social-icons {
+    display: flex;
+    align-content: stretch;
+    padding: 0;
+}
+
+ul.social-icons .stripe {margin: auto;}
+
+span.stripe.point-stripe {
+    float: right;
+    background: url(assets/images/icons.png) 80px -42px;
+    width: 40px;
+}
+h5.heading{
+    color: #a7a7a7;
+}
+.user-container img{
+    float: left;
+    border-radius: 50%;
+    padding-right: 15px;
+}
+.user-container {
+    display: block;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.color-shide{
+    color: #43425D;
+    margin: 0;
+    font-size: 15px;
+}
+
+button.btn.float-right {
+    background: #6763E3;
+    color: #fff;
+    display: inline-flex;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+span.stripe.plus-stripe {
+    background: url("assets/images/icons.png") 70px 0;
+    height: 20px;
+    margin-left: 5px;
+}
+.desktop{
+    display: block;
+}
+.tab{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+a.active {
+    border-left: 4px solid #fff;
+}
+
+@media (max-width: 1199px){
+    .desktop{
+        display: none;
+    }
+    #mainContent form input[type=text]{
+        width: 150px;
+    }
+    .tab{
+        display: block;
+    }
+    .card.chart-card.seconds{
+        margin-top: 7px
+    }
+}
+
+@media (max-width:767px){
+    div#navbarSupportedContent-5 {
+        display: block !important;
+        flex: inherit;
+    }
+}
+
+@media (max-width:576px){
+    .tab{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    span.stripe.stripe-collapse.mobile {
+        float: right;
+        margin: 0;
+    }
+}

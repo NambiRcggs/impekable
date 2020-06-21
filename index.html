@@ -1,0 +1,281 @@
+<!DOCType html>
+<html>
+
+<head>
+    <title>Mitsogo Dashboard</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap Js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>    
+    <script src="startup.js" ></script>
+    <script src="chartScript.js"></script>
+</head>
+
+<body>
+
+    <section id="sideBar">
+        <div class="logo">
+            <h6>IMPEKABLE <span class="stripe stripe-collapse mobile" onclick="collapse()">x</span></h5>
+        </div>
+        <div class="sidenav">
+            <a href="#">
+                <span class="stripe home-stripe"></span>Home</a>
+            <a href="#" class="active">
+                <span class="stripe dashboard-stripe"></span>Dashboard</a>
+            <a href="#">
+                <span class="stripe inbox-stripe"></span>Inbox</a>
+            <a href="#">
+                <span class="stripe products-stripe"></span>Products</a>
+        </div>
+    </section>
+    <section id="mainContent">
+        <header>
+            <nav class="navbar navbar-expand-sm bg-white navbar-dark">
+                <span class="stripe stripe-collapse" onclick="collapse()"></span>
+                <form class="form-inline">
+                    <button class="btn" type="submit"><span class="stripe search-stripe"></span></button>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search transactions, invoices or help">
+                </form>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item desktop">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="stripe bell-stripe"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item desktop">
+                            <a class="nav-link waves-effect waves-light">
+                                <p class="user-name">John Doe</p>
+                            </a>
+                        </li>
+                        <li class="nav-item avatar dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg"
+                                    class="rounded-circle z-depth-0" alt="avatar image">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                                aria-labelledby="navbarDropdownMenuLink-5">
+                                <a class="dropdown-item waves-effect waves-light tab mobile" href="#">John Doe</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section id="content-pane">
+            <h4 class="container first-heading">Overview <button class="btn float-right">Add Funds<span
+                        class="stripe plus-stripe"></span></button></h4>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-6 col-md-6">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-12 col-md-12">
+                                <div class="card chart-card">
+                                    <h6 class="p-3">Statistics</h6>
+                                    <canvas id="myChart1"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-md-12">
+                                <div class="card chart-card seconds">
+                                    <h6 class="p-3">Sales Distribution</h6>
+                                    <canvas id="myChart2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row desktop">
+                            <div class="col-12 mt-4 mb-5">
+                                <div class="bg-white p-3">
+                                    <h6 class="pt-3 pb-3">Referer</h6>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Location</th>
+                                                <th>Views</th>
+                                                <th>Sales</th>
+                                                <th>Conversion</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>google.com</td>
+                                                <td>3422</td>
+                                                <td>765</td>
+                                                <td>42%</td>
+                                                <td>$19,231</td>
+                                            </tr>
+                                            <tr>
+                                                <td>facebook.com</td>
+                                                <td>3422</td>
+                                                <td>765</td>
+                                                <td>42%</td>
+                                                <td>$19,231</td>
+                                            </tr>
+                                            <tr>
+                                                <td>twitter.com</td>
+                                                <td>3422</td>
+                                                <td>765</td>
+                                                <td>42%</td>
+                                                <td>$19,231</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Direct, email, IM</td>
+                                                <td>3422</td>
+                                                <td>765</td>
+                                                <td>42%</td>
+                                                <td>$19,231</td>
+                                            </tr>
+                                            <tr>
+                                                <td>linkedin.com</td>
+                                                <td>3422</td>
+                                                <td>765</td>
+                                                <td>42%</td>
+                                                <td>$19,231</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="#" class="text-intend">Show more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="card user-card">
+                            <div class="img-circle m-3">
+                                <img src="./assets/images/Jana Navakova.jpg">
+                                <b>Nick Herasimenka</b>
+                                <p>United States</p>
+                            </div>
+                            <ul class="social-icons">
+                                <li class="stripe insta-stripe"><a href="#" target="_blank"></a></li>
+                                <li class="stripe twitter-stripe"><a href="#" target="_blank"></a></li>
+                                <li class="stripe facebook-stripe"><a href="#" target="_blank"></a></li>
+                                <li class="stripe message-stripe"><a href="#" target="_blank"></a></li>
+                            </ul>
+                            <div class="col-12  mt-4">
+                                <h5 class="heading">Our Users <span class="stripe point-stripe"></span></h5>
+
+                                <div class="user-list">
+                                    <div class="user-container mt-3 mb-3">
+                                        <img src="./assets/images/Drew James.png">
+                                        <div class="">
+                                            <b>Drew Janes</b>
+                                            <p class="color-shide">United States - Mobile : 871.567.4877</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-container mb-3">
+                                        <img src="./assets/images/Bavid kames.png">
+                                        <div class="">
+                                            <b>Bavid Kames</b>
+                                            <p class="color-shide">United States - Mobile : 871.567.4877</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-container mb-3">
+                                        <img src="./assets/images/Lavid Emes.png">
+                                        <div class="">
+                                            <b>Lavid Emes</b>
+                                            <p class="color-shide">United States - Mobile : 871.567.4877</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 card mt-4 pt-3 pb-0">
+                            <div style="margin-bottom: 13px;">
+                                <h5 class="heading mb-3">Product Video <span class="stripe point-stripe"></span></h5>
+                                <div style="overflow:hidden;position: relative;">
+                                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%"
+                                        height="185" type="text/html"
+                                        src="https://www.youtube.com/embed/Oy6hk6Y7VHQ?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOR Mobile Responsive -->
+                <div class="row tab mobile">
+                    <div class="col-12 mt-4 mb-5">
+                        <div class="bg-white p-3">
+                            <h6 class="pt-3 pb-3">Referer</h6>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Location</th>
+                                        <th>Views</th>
+                                        <th>Sales</th>
+                                        <th>Conversion</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>google.com</td>
+                                        <td>3422</td>
+                                        <td>765</td>
+                                        <td>42%</td>
+                                        <td>$19,231</td>
+                                    </tr>
+                                    <tr>
+                                        <td>facebook.com</td>
+                                        <td>3422</td>
+                                        <td>765</td>
+                                        <td>42%</td>
+                                        <td>$19,231</td>
+                                    </tr>
+                                    <tr>
+                                        <td>twitter.com</td>
+                                        <td>3422</td>
+                                        <td>765</td>
+                                        <td>42%</td>
+                                        <td>$19,231</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct, email, IM</td>
+                                        <td>3422</td>
+                                        <td>765</td>
+                                        <td>42%</td>
+                                        <td>$19,231</td>
+                                    </tr>
+                                    <tr>
+                                        <td>linkedin.com</td>
+                                        <td>3422</td>
+                                        <td>765</td>
+                                        <td>42%</td>
+                                        <td>$19,231</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#" class="text-intend">Show more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
